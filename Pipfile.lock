@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "df620e2b4641b1bec7d65607485f49d0c77557c302e4580d5424d317aa89cfcf"
+            "sha256": "30f63bc5e8470bc450aafa8591d1ea5332ffcbf78814bd2972c3d93dfe3d0658"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,14 @@
         ]
     },
     "default": {
+        "affine": {
+            "hashes": [
+                "sha256:8a3df80e2b2378aef598a83c1392efd47967afec4242021a0b06b4c7cbc61a92",
+                "sha256:a24d818d6a836c131976d22f8c27b8d3ca32d0af64c1d8d29deb7bafa4da1eea"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==2.4.0"
+        },
         "appdirs": {
             "hashes": [
                 "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41",
@@ -167,6 +175,15 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2' and python_version < '4'",
             "version": "==0.7.2"
+        },
+        "contextily": {
+            "hashes": [
+                "sha256:3c747925269be248a9b1a761859e05d1681286e04d5d0796bdaf1de3409474bb",
+                "sha256:b06ead7258b34e73db2e318e33554f54a22d207b3c272b74d8b64801773b3fc3"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9'",
+            "version": "==1.6.2"
         },
         "contourpy": {
             "hashes": [
@@ -323,13 +340,39 @@
             "markers": "python_version >= '3.8'",
             "version": "==4.56.0"
         },
+        "geodatasets": {
+            "hashes": [
+                "sha256:ea1b0f885f1b3305d4a308b2ddee042e425c5288b5ff6b00e6b0ac74a4d5e8d9",
+                "sha256:fd2a91618277553dbb180496bb952d496e4bc99e8c0066c5dc06701d66d53540"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.8'",
+            "version": "==2024.8.0"
+        },
+        "geographiclib": {
+            "hashes": [
+                "sha256:6b7225248e45ff7edcee32becc4e0a1504c606ac5ee163a5656d482e0cd38734",
+                "sha256:f7f41c85dc3e1c2d3d935ec86660dc3b2c848c83e17f9a9e51ba9d5146a15859"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==2.0"
+        },
         "geopandas": {
             "hashes": [
                 "sha256:01e147d9420cc374d26f51fc23716ac307f32b49406e4bd8462c07e82ed1d3d6",
                 "sha256:b8bf70a5534588205b7a56646e2082fb1de9a03599651b3d80c99ea4c2ca08ab"
             ],
+            "index": "pypi",
             "markers": "python_version >= '3.9'",
             "version": "==1.0.1"
+        },
+        "geopy": {
+            "hashes": [
+                "sha256:50283d8e7ad07d89be5cb027338c6365a32044df3ae2556ad3f52f4840b3d0d1",
+                "sha256:ae8b4bc5c1131820f4d75fce9d4aaaca0c85189b3aa5d64c3dcaf5e3b7b882a7"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==2.4.1"
         },
         "idna": {
             "hashes": [
@@ -482,6 +525,13 @@
             "index": "pypi",
             "markers": "python_version >= '3.10'",
             "version": "==3.10.1"
+        },
+        "mercantile": {
+            "hashes": [
+                "sha256:30f457a73ee88261aab787b7069d85961a5703bb09dc57a170190bc042cd023f",
+                "sha256:fa3c6db15daffd58454ac198b31887519a19caccee3f9d63d17ae7ff61b3b56b"
+            ],
+            "version": "==1.2.1"
         },
         "numpy": {
             "hashes": [
@@ -694,6 +744,14 @@
             "markers": "python_version >= '3.9'",
             "version": "==4.3.7"
         },
+        "pooch": {
+            "hashes": [
+                "sha256:3529a57096f7198778a5ceefd5ac3ef0e4d06a6ddaf9fc2d609b806f25302c47",
+                "sha256:76561f0de68a01da4df6af38e9955c4c9d1a5c90da73f7e40276a5728ec83d10"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==1.8.2"
+        },
         "pygris": {
             "hashes": [
                 "sha256:28d4f70ace5aa5e45828fc304f451f2cdcd530deb2df143bf810501b336a7588",
@@ -801,6 +859,33 @@
                 "sha256:c2db42be2a2518b28e65f9207c4d05e6ff547d1efa4086469ef855e4ab70178e"
             ],
             "version": "==2025.1"
+        },
+        "rasterio": {
+            "hashes": [
+                "sha256:1839960e2f3057a6daa323ccf67b330f8f2f0dbd4a50cc7031e88e649301c5c0",
+                "sha256:1a6e6ca9ec361599b48c9918ce25adb1a9203b8c8ca9b34ad78dccb3aef7945a",
+                "sha256:201f05dbc7c4739dacb2c78a1cf4e09c0b7265b0a4d16ccbd1753ce4f2af350a",
+                "sha256:38a126f8dbf405cd3450b5bd10c6cc493a2e1be4cf83442d26f5e4f412372d36",
+                "sha256:3f411a6a5bcb81ab6dc9128a8bccd13d3822cfa4a50c239e3a0528751a1ad5fc",
+                "sha256:4009f7ce4e0883d8e5b400970daa3f1ca309caac8916d955722ee4486654d452",
+                "sha256:54eef32d20a0dfbba59a8bb9828e562c3e9e97e2355b8dfe4a5274117976059f",
+                "sha256:597f8dcf494d0ca4254434496e83b1723fec206d23d64da5751a582a2b01e1d3",
+                "sha256:5b8a4311582274de2346450e5361d092b80b8b5c7b02fda6203402ba101ffabf",
+                "sha256:5d4fcb635379b3d7b2f5e944c153849e3d27e93f35ad73ad4d3f0b8a580f0c8e",
+                "sha256:80f994b92e5dda78f13291710bd5c43efcfd164f69a8a2c20489115df9d178c8",
+                "sha256:812c854e7177064aeb58def2d59752887ad6b3d39ff3f858ed9df3f2ddc95613",
+                "sha256:8e90c2c300294265c16becc9822337ded0f01fb8664500b4d77890d633d8cd0e",
+                "sha256:98a9c89eade8c779e8ac1e525269faaa18c6b9818fc3c72cfc4627df71c66d0d",
+                "sha256:9c30114d95ebba4ff49f078b3c193d29ff56d832588649400a3fa78f1dda1c96",
+                "sha256:a702e21712ba237e34515d829847f9f5f06d8e665e864a7bb0a3d4d8f6dec10d",
+                "sha256:a962ad4c29feaf38b1d7a94389313127de3646a5b9b734fbf9a04e16051a27ff",
+                "sha256:af04f788f6f814569184bd9da6c5d9889512212385ab58c52720dfb1f972671d",
+                "sha256:d9bab1a0bb22b8bed1db34b5258db93d790ed4e61ef21ac055a7c6933c8d5e84",
+                "sha256:e703e4b2c74c678786d5d110a3f30e26f3acfd65f09ccf35f69683a532f7a772",
+                "sha256:e79847a5a0e01399457a1e02d8c92040cb56729d054fe7796f0c17b246b18bf0"
+            ],
+            "markers": "python_version >= '3.9'",
+            "version": "==1.4.3"
         },
         "requests": {
             "hashes": [
@@ -1017,6 +1102,14 @@
             ],
             "index": "pypi",
             "version": "==3.2"
+        },
+        "xyzservices": {
+            "hashes": [
+                "sha256:5cdbb0907c20be1be066c6e2dc69c645842d1113a4e83e642065604a21f254ba",
+                "sha256:fa599956c5ab32dad1689960b3bb08fdcdbe0252cc82d84fc60ae415dc648907"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==2025.1.0"
         }
     },
     "develop": {}

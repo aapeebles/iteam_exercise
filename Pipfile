@@ -10,6 +10,9 @@ wget = "*"
 pygris = "*"
 matplotlib = "*"
 libpysal = "*"
+geopandas = "*"
+contextily = "*"
+geodatasets = "*"
 
 [dev-packages]
 
