@@ -13,6 +13,8 @@ libpysal = "*"
 geopandas = "*"
 contextily = "*"
 geodatasets = "*"
+seaborn = "*"
+jinja2 = "*"
 
 [dev-packages]
 

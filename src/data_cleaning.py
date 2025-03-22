@@ -33,6 +33,8 @@ allegheny_pop['tract'].isna().sum()
 allegheny_pop['overcrowded_count'] = np.multiply( allegheny_pop['Households'],
                                                  (np.divide(allegheny_pop['Percent of Overcrowded Housing Units'],
                                                             100)))
+allegheny_pop['overcrowded_count'] = allegheny_pop['overcrowded_count'].astype('int')
+
 ## import shapefile for allegheny county muni
 allegheny_shapes = gpd.read_file(SHAPEFILE_PATH)
 allegheny_shapes = allegheny_shapes.to_crs(epsg = 32617)
@@ -87,12 +89,15 @@ original_names = (allegheny_full.loc[allegheny_full['tract']
                                            .loc[tract_count['municipality']>1,:]
                                            .index.to_list())]
                                            .sort_values(by='tract'))
+
 borough_dict = dict(zip(updated_borough_names.tract.values,
                         updated_borough_names.municipality.values))
+
 full_reference = pd.merge(original_names,
                           updated_borough_names,
                           on='tract').rename(columns={'municipality_y':'municipality',
                                                       'municipality_x':'NAME'})
+
 short_reference = full_reference.drop(columns=['tract']).drop_duplicates()
 short_dict= dict(zip(short_reference.NAME.values, short_reference.municipality.values))
 ## Remove duplicate tracts from allegheny full and replace with condensed version
@@ -123,11 +128,17 @@ allegheny_shapes_cleaned = geometry_shape_data_raw.dissolve(by='NAME_TRACT')
 allegheny_shapes_desc = pd.merge(descriptive_shape_data,
                                  allegheny_shapes_cleaned,
                                  on='NAME_TRACT').reset_index()
+#save dataframe to pickle for later use
+allegheny_shapes_desc.to_pickle('data_files/county_shapes_cleaned.pkl')
 
 
+
+
+############
+# clean up whitespace around tract pre-merging
 allegheny_pop['tract'] = allegheny_pop['tract'].str.strip()
 allegheny_name_tract_mapping['tract'] = allegheny_name_tract_mapping['tract'].str.strip()
-############
+
 allegheny_tract_w_muni = pd.merge(allegheny_pop,
                                   allegheny_name_tract_mapping,
                                   on='tract',
