@@ -52,14 +52,6 @@ plt.show()
 
 
 ### MAPPING
-# .to_crs(epsg = 32617)
-
-# ax = pa_merge.plot(column = "BIPOC Residents",
-#                        figsize=(10, 10),
-#                        cmap = "RdPu",
-#                        legend = True,
-#                        alpha=0.5)
-
 
 agg_data.reset_index(inplace=True)
 agg_data.columns
@@ -82,9 +74,7 @@ table = target_df[target_df['rank']<=10].loc[:,['rank','NAME_TRACT']].sort_value
 table['NAME_TRACT'] = table['NAME_TRACT'].str.capitalize()
 table.rename(columns={'NAME_TRACT':'Municipality'}, inplace = True)
 
-table
-
-
+### MAP IT
 fig, ax = plt.subplots(figsize=(12, 8))
 divider = make_axes_locatable(ax)
 cax = divider.append_axes("bottom", size="5%", pad=0.1)
@@ -108,12 +98,6 @@ ax.set_title('Analyzing the Distribution of Poverty\nacross Allegheny County')
 plt.tight_layout()
 plt.savefig('img/poverty_map.png')
 plt.show()
-
-#  bbox=[0, -0.6, 1, 0.5])
-
-
-
-
 
 
 
