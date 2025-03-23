@@ -17,6 +17,7 @@ seaborn = "*"
 jinja2 = "*"
 ipykernel = "*"
 imgkit = "*"
+pretty-html-table = "*"
 
 [dev-packages]
 
